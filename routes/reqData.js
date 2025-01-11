@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Crypto = require('../models/crypto');
 
-router.get('/stats', async (req, res) => {
+router.get('/', async (req, res) => {
   const { coin } = req.query;
   if (!coin) return res.status(400).send({ error: 'Coin is required' });
 

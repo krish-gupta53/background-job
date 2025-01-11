@@ -1,8 +1,11 @@
-
 const axios = require('axios');
+const { apikey, apiBaseUrl } = require('../config');
 
 const coingeckoApi = axios.create({
-  baseURL: 'https://api.coingecko.com/api/v3/'
+  baseURL: apiBaseUrl,
+  headers: {
+    'x-cg-demo-api-key': apikey
+  }
 });
 
 module.exports = coingeckoApi;

@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Crypto = require('../models/Crypto');
+const Crypto = require('../models/crypto');
 
 router.get('/deviation', async (req, res) => {
   const { coin } = req.query;
